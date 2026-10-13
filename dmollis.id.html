@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>dmollis.id — Strategi Konten & Sales</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--pg:#dde1c6;--sh:linear-gradient(160deg,#dbe1ba,#adb982);--panel:rgba(63,75,30,.15);--side:rgba(255,255,255,.3);--card:#fbfcf5;--cell:#fff;--ink:#1f2511;--mut:#5a6344;--line:#e0e4cf;--dk:#2f3a14;--ondk:#f4f6e8;--lime:#d3ee55;--onl:#1f2511;--gold:#c79d2e;--dr:#6f7a50;--sg:#e9c25c;
+--c0:#a8566b;--c1:#9a6b2f;--c2:#4f6b2a;--c3:#2f6a73;--c4:#7a4fa0;--c5:#c2602f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pg:#0d1008;--sh:linear-gradient(160deg,#262e18,#161b0e);--panel:rgba(255,255,255,.06);--side:rgba(255,255,255,.05);--card:#20271a;--cell:#1a2013;--ink:#eef0e2;--mut:#a8b093;--line:#323a25;--dk:#d3ee55;--ondk:#1b2112;--gold:#e0b84e;--dr:#4b5636;--sg:#c7a23f;--c0:#e0889c;--c1:#d9a05a;--c2:#9bc05a;--c3:#5fbcc7;--c4:#b88be0;--c5:#f0a070}}
+:root[data-theme="dark"]{--pg:#0d1008;--sh:linear-gradient(160deg,#262e18,#161b0e);--panel:rgba(255,255,255,.06);--side:rgba(255,255,255,.05);--card:#20271a;--cell:#1a2013;--ink:#eef0e2;--mut:#a8b093;--line:#323a25;--dk:#d3ee55;--ondk:#1b2112;--gold:#e0b84e;--dr:#4b5636;--sg:#c7a23f;--c0:#e0889c;--c1:#d9a05a;--c2:#9bc05a;--c3:#5fbcc7;--c4:#b88be0;--c5:#f0a070}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--pg);color:var(--ink);font:16px/1.55 'DM Sans',system-ui,sans-serif;padding:16px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;margin:0;line-height:1.15}
+.app{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:92px 1fr;background:var(--sh);border-radius:30px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(35,45,10,.55)}
+nav{background:var(--side);padding:18px 0;border-right:1px solid rgba(255,255,255,.18)}
+#tabs{display:flex;flex-direction:column;gap:6px;align-items:center;position:sticky;top:14px}
+#tabs button{width:74px;border:0;background:none;color:var(--ink);border-radius:18px;padding:9px 2px;cursor:pointer;font:500 10.5px 'DM Sans',sans-serif;display:flex;flex-direction:column;align-items:center;gap:3px}
+#tabs button i{font-style:normal;font-size:19px;line-height:1}#tabs button[aria-selected=true]{background:var(--dk);color:var(--ondk)}
+.mc{min-width:0}.bar2{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 26px 0}
+.brand{display:flex;align-items:center;gap:10px;font:700 18px 'Fraunces',serif}.logo{width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font:700 18px 'Fraunces',serif}
+.tg{display:flex;background:var(--panel);border-radius:99px;padding:3px}.tg button{border:0;background:none;color:var(--ink);border-radius:99px;padding:7px 14px;font:500 13px 'DM Sans',sans-serif;cursor:pointer}.tg button[aria-pressed=true]{background:var(--card);font-weight:700}
+.av{width:38px;height:38px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-weight:700;color:#1f2511}
+.hero{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;padding:22px 26px 18px}.hero h1{font-size:clamp(28px,5vw,44px)}.hero p{margin:6px 0 0;color:var(--mut);max-width:44ch;font-size:14px}
+.hs{display:flex;gap:22px;align-items:center}.hs>div{border-left:1px solid rgba(0,0,0,.18);padding-left:20px;min-width:130px}.hs>div:first-child{border:0;padding:0}.hs small{display:block;font-size:12px;color:var(--mut)}.hs b{font:700 24px 'Fraunces',serif}.hs b span{font:400 14px 'DM Sans',sans-serif;color:var(--mut)}
+main{padding:0 26px 30px}.w{padding:0 26px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+section{display:none;padding:6px 0 30px}section.on{display:block}
+h2{font-size:26px;margin-bottom:6px}.sub{color:var(--mut);margin:0 0 18px;max-width:66ch}.note{font-size:13px;color:var(--mut)}
+.pills{display:flex;gap:8px;margin-bottom:16px}.pills button{border:0;border-radius:99px;padding:9px 20px;background:var(--panel);color:var(--ink);font:500 14px 'DM Sans',sans-serif;cursor:pointer}.pills button[aria-pressed=true]{background:var(--dk);color:var(--ondk);font-weight:700}
+.dash{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}.sd{display:grid;gap:14px}
+.cd{background:var(--card);border-radius:22px;padding:16px}.cd h3{font-size:17px;margin-bottom:8px}
+.mh2{display:flex;justify-content:space-between;margin-bottom:8px;font-size:15px}.m7{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}.m7 small{color:var(--mut);font-size:11px}
+.md{position:relative;border:0;background:none;color:var(--ink);border-radius:50%;aspect-ratio:1;font:500 13px 'DM Sans',sans-serif;cursor:pointer;padding:0}.md.off{opacity:.35}.md.inw{background:var(--panel);border-radius:8px}.md.on{background:var(--lime);color:var(--onl);border-radius:50%;font-weight:700}
+.md u{position:absolute;left:50%;bottom:3px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--gold)}
+.ck{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;color:var(--ink);padding:7px 2px;font:500 14px 'DM Sans',sans-serif;cursor:pointer;text-align:left;border-bottom:1px solid var(--line)}.ck:last-child{border:0}
+.ck u{width:18px;height:18px;border-radius:50%;border:2px solid var(--cc);flex:none}.ck.on u{background:var(--cc)}.ck:not(.on){opacity:.55}
+.mm{display:flex;justify-content:space-between;width:100%;border:0;background:none;color:var(--ink);padding:7px 2px;font:14px 'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid var(--line)}.mm:last-child{border:0}.mm small{color:var(--mut)}
+.calp{background:var(--panel);border-radius:24px;padding:14px;min-width:0}.calh{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:2px 6px 12px}.calh h2{margin:0;font-size:22px}.nv{display:flex;gap:6px}
+.calw{background:var(--cell);border-radius:18px;overflow:auto}.lg{font-size:12.5px;color:var(--mut);margin:10px 6px 0}
+.wg{display:grid;grid-template-columns:54px repeat(7,minmax(96px,1fr));min-width:740px}
+.wh{text-align:center;padding:12px 4px;cursor:pointer;border-bottom:1px solid var(--line)}.wh b{display:block;font:700 20px 'Fraunces',serif}.wh small{color:var(--mut);font-size:12px}.wh.on b{background:var(--dk);color:var(--ondk);border-radius:12px;display:block;width:fit-content;margin:0 auto;padding:0 9px}
+.tm{padding:10px 8px;font-size:12px;color:var(--mut);border-top:1px solid var(--line)}.cl{border-top:1px solid var(--line);border-left:1px solid var(--line);padding:4px;min-height:96px}
+.ev{position:relative;display:block;width:100%;text-align:left;border:0;border-radius:13px;padding:8px 9px 14px;margin:3px 0;font:inherit;cursor:pointer;background:var(--dr);color:#fff}
+.ev b{display:block;font-size:12.5px;line-height:1.25}.ev span{font-size:11px;opacity:.9}.ev .dt{position:absolute;right:8px;bottom:7px;width:11px;height:11px;border-radius:50%;border:2px solid rgba(255,255,255,.85)}
+.ev[data-s=Siap]{background:var(--sg);color:#1f2511}.ev[data-s=Tayang]{background:var(--lime);color:#1f2511}
+.mg{display:grid;grid-template-columns:repeat(7,minmax(90px,1fr));min-width:700px}.mh{padding:10px;text-align:center;font-size:12px;color:var(--mut)}
+.mcell{min-height:104px;border-top:1px solid var(--line);border-left:1px solid var(--line);padding:6px;cursor:pointer}.mcell.off{opacity:.4}.mcell.on{background:var(--panel)}.mcell>b{font-size:13px}
+.mi{display:block;margin-top:3px;padding:2px 6px;border-radius:7px;border-left:4px solid var(--cc);background:var(--dr);color:#fff;font-size:11px;line-height:1.3;cursor:pointer}.mi[data-s=Siap]{background:var(--sg);color:#1f2511}.mi[data-s=Tayang]{background:var(--lime);color:#1f2511}
+.dl{display:grid;gap:12px;padding:14px}.dc{border:1px solid var(--line);border-radius:16px;padding:14px}.dc .t{font-size:13px;color:var(--mut)}.dc h3{margin:4px 0 8px;font-size:20px}.dc p{margin:8px 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-bottom:14px}
+.box{background:var(--card);border-radius:22px;padding:18px}.box h3{font-size:18px;margin-bottom:8px}.box p,.box li{font-size:15px}.box ul{padding-left:18px;margin:6px 0}
+.quote{font:500 clamp(20px,3.6vw,28px)/1.3 'Fraunces',serif;border-left:4px solid var(--dk);padding:4px 0 4px 16px;margin:0 0 20px;max-width:30ch}
+.lad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}@media(max-width:620px){.lad,.tl{grid-template-columns:1fr!important}}
+.lad div{border-radius:20px;padding:16px;color:var(--ondk);background:var(--dk)}.lad div:nth-child(2){background:var(--lime);color:var(--onl)}.lad div:nth-child(3){background:var(--card);color:var(--ink)}
+.lad b{font:700 18px 'Fraunces',serif;display:block}.lad span{font-size:14px}
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.tl div{background:var(--card);padding:14px;border-radius:20px;border-top:5px solid var(--lime)}
+.pc{cursor:pointer;text-align:left;color:inherit;font:inherit;width:100%;border:0;border-top:6px solid var(--cc);background:var(--card);border-radius:22px;padding:16px}
+.pc b{font:700 20px 'Fraunces',serif;display:block}.pc .pct{font:700 30px 'Fraunces',serif;color:var(--cc)}.pc span{font-size:14px;color:var(--mut);display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.chip{border:0;background:var(--card);color:var(--ink);border-radius:99px;padding:7px 14px;font:500 14px 'DM Sans',sans-serif;cursor:pointer}.chip[aria-pressed=true]{background:var(--dk);color:var(--ondk)}
+.bar{height:6px;background:rgba(0,0,0,.14);border-radius:9px;overflow:hidden;margin-top:6px}.bar div{height:100%;background:var(--dk);width:0;transition:width .3s}
+dialog{border:0;border-radius:22px;background:var(--card);color:var(--ink);max-width:500px;width:calc(100% - 28px);padding:20px;max-height:88vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.55)}dialog h3{font-size:22px;margin:4px 0 10px}dialog p{margin:8px 0}dialog b.l{color:var(--mut);font-weight:500;font-size:13px;display:block}
+.tpl{white-space:pre-wrap;background:var(--cell);border:1px dashed var(--line);border-radius:10px;padding:10px;font-size:14px;margin:6px 0}
+select,input[type=text]{font:inherit;color:var(--ink);background:var(--cell);border:1px solid var(--line);border-radius:8px;padding:7px 9px}
+.btn{background:var(--dk);color:var(--ondk);border:0;border-radius:99px;padding:9px 18px;font:700 14px 'DM Sans',sans-serif;cursor:pointer}.btn.g{background:var(--card);color:var(--ink)}
+.tw{overflow-x:auto;background:var(--card);border-radius:20px;padding:6px 10px}table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--mut);font-weight:500}
+.sc{margin-bottom:24px}.sc h3{font-size:20px}.sc .m{color:var(--mut);font-size:14px;margin:2px 0 8px}
+.sim{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.sl{margin:12px 0}.sl label{display:flex;justify-content:space-between;font-size:14px}.sl input{width:100%;accent-color:var(--dk)}
+.res{font:700 38px 'Fraunces',serif}.pb{height:14px;background:var(--line);border-radius:9px;overflow:hidden;margin:8px 0}.pb div{height:100%;background:var(--lime);transition:width .25s}
+.cm{max-width:420px;width:100%;display:block;margin:6px 0 4px}.cm text{font:12px 'DM Sans',sans-serif;fill:var(--mut)}.cm .nm{font-weight:700;fill:var(--ink);font-size:13px}
+.ct th,.ct td{min-width:120px}.ct td:first-child,.ct th:first-child{min-width:96px;font-weight:700;color:var(--mut)}.ct td.c1{background:var(--panel)}
+.tot{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}.tot div{background:var(--card);border-radius:18px;padding:10px 18px;min-width:120px}.tot b{font:700 24px 'Fraunces',serif;display:block}.tot span{font-size:13px;color:var(--mut)}
+.pbr{display:grid;grid-template-columns:110px 1fr 110px;gap:8px;align-items:center;font-size:14px;margin:4px 0}.pbr div div{height:10px;border-radius:5px}
+.trk{min-width:960px}.trk td input{width:84px;background:var(--cell);border:1px solid var(--line);border-radius:8px;padding:7px;color:var(--ink);font:inherit}.trk td select{max-width:210px}.rec{font-size:13px;min-width:210px}
+footer{color:var(--mut);font-size:13px;padding:0 0 26px}
+@media(max-width:860px){body{padding:8px 8px 100px}.app{grid-template-columns:1fr;border-radius:24px}nav{position:fixed;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:30;border-radius:22px;padding:6px;background:var(--card);box-shadow:0 8px 30px rgba(0,0,0,.28);border:0}#tabs{flex-direction:row;overflow-x:auto;position:static;justify-content:flex-start}#tabs button{flex:none;width:68px}.dash{grid-template-columns:1fr}.calp{order:-1}.bar2,.hero,main,.w{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<div class="app"><nav><div id="tabs" role="tablist"></div></nav><div class="mc">
+<div class="bar2"><div class="brand">dmollis.id</div><div style="display:flex;gap:10px;align-items:center"><div class="tg" id="tg"><button data-t="dark">Gelap</button><button data-t="light">Terang</button></div><span class="av">D</span></div></div>
+<div class="hero"><div><h1>Strategi Konten &amp; Sales</h1><p>Ignite Memories. Kalender, pilar, script, KPI, dan tracker dalam satu dashboard.</p></div><div class="hs"><div><small>Omzet bulanan</small><b>Rp30 jt<span> → 100 jt</span></b></div><div><small>Konten tayang</small><b><span id="stT" style="font:700 24px 'Fraunces',serif;color:var(--ink)">0</span><span> / 19</span></b><div class="bar"><div id="stP"></div></div></div></div></div>
+<main>
+
+<section id="s0" class="on">
+<h2>Strategi</h2>
+<p class="quote">dmollis adalah buku diary-nya relationship.</p>
+<div class="cols">
+<div class="box"><h3>Positioning</h3><p>Coklat artisan yang menyimpan memori lewat rasa, tulisan, dan wangi. Bukan menjual produk, tetapi <b>connection, commitment, expression</b>. Semua dibuat "ribet" dengan sengaja: R&D, kemasan, tampilan.</p></div>
+<div class="box"><h3>Brand yang dikunci</h3><ul><li>Tagline <i>Ignite Memories</i></li><li>Tiga kata: exclusive, artisan, amaze</li><li>Nada elegan-premium dan puitis-emosional</li><li>Logo, warna, font, bahan premium</li><li>Tanpa diskon besar</li></ul></div>
+<div class="box"><h3>Tiga mesin omzet</h3><ul><li><b>Ritel online:</b> konten, iklan, repeat</li><li><b>B2B korporat:</b> BCA, BNI, UGM, Astra pernah dilayani (Rp3–70 jt)</li><li><b>Reseller dan store:</b> reseller selektif, store Kota Baru</li></ul></div>
+</div>
+<div class="lad"><div><b>Entry · Rp38–115 rb</b><span>Truffle, Choco Bark. Mulai dari hal kecil.</span></div><div><b>Core · Rp185–305 rb</b><span>Gradient (hero, tanpa kompetitor langsung), Tulip Delight.</span></div><div><b>Premium · mulai Rp850 rb</b><span>Hampers: Gradient, lilin, potpourri, gift card.</span></div></div>
+<h2 style="margin-top:22px">Kampanye Halloween 🎃</h2>
+<div class="tl"><div><b>19–25 Okt · Dekor</b><br>Dibalik layar mendekor toko, teaser, gift card edisi Halloween.</div><div><b>26–27 Okt · Reveal</b><br>Toko versi Halloween dibuka; info spot foto dan cara ikut.</div><div><b>28–31 Okt · Berjalan</b><br>Konten suasana toko, ucapan Halloween 31 Okt, lalu recap dan teaser Natal.</div></div>
+<div class="box" style="margin:12px 0 22px"><p><b>Penjaga brand:</b> penambahan warna boleh per campaign (izin client), nada tetap elegan dan puitis, tanpa diskon besar. Tema, jam buka, dan produk khusus Halloween [untuk dikonfirmasi dmollis]. Yang didekor adalah toko yang sudah ada dan tidak ada acara khusus, jadi fokusnya suasana toko. Catat kunjungan toko dan tag UGC sebagai data campaign.</p><p><b>Hashtag campaign (usulan, menunggu persetujuan client):</b> #MemoriesAfterDark. Alternatif: #HauntedByMemories, #MeltedMemories, #SweetHaunting, #dmollisAfterDark, #ManisYangMenghantui. Set per postingan: satu hashtag campaign + #IgniteMemories + #dmollis.</p></div>
+<h2 style="margin-top:22px">Peta jalan 90 hari</h2>
+<div class="tl"><div><b>Minggu 1–2 · Fondasi</b><br>Audit ROAS iklan, Brand Guardrails, pelacakan konten, bank konten, B2B kit.</div><div><b>Minggu 3–6 · Aktivasi</b><br>Konten rutin, Open PO Natal, outreach B2B, desain program reseller.</div><div><b>Minggu 7–12 · Puncak</b><br>Natal, Hari Ibu, teaser store, pilot reseller, mulai PO Ramadan.</div></div>
+<p class="note" style="margin-top:12px">Pasar utama: Jabodetabek, usia 25–45.</p>
+</section>
+
+<section id="sk">
+<h2>Kompetitor</h2>
+<p class="sub">Berdasarkan tampilan profil Instagram (13 Okt 2026; dmollis 8 Okt). Data engagement, iklan, dan harga lengkap belum tercakup.</p>
+<div class="chips" id="kc"></div>
+<div class="tw"><table class="ct"><thead id="kh"></thead><tbody id="kb"></tbody></table></div>
+<div class="cols" style="margin-top:20px">
+<div class="box"><h3>Peta posisi</h3>
+<svg class="cm" viewBox="0 0 400 300" role="img" aria-label="Peta posisi: harga dan pendekatan emosional">
+<line x1="40" y1="260" x2="390" y2="260" stroke="var(--line)"/><line x1="40" y1="260" x2="40" y2="20" stroke="var(--line)"/>
+<rect x="250" y="20" width="140" height="100" rx="10" fill="var(--gold)" opacity=".14"/>
+<text x="215" y="285">Harga rendah</text><text x="320" y="285">Premium</text>
+<text x="46" y="36">Emosional, ekspresif</text><text x="46" y="254">Fungsional, tren</text>
+<circle cx="75" cy="150" r="9" fill="var(--c3)"/><text class="nm" x="90" y="154">Trufflelogy</text>
+<circle cx="170" cy="215" r="9" fill="var(--c1)"/><text class="nm" x="185" y="219">Hanania</text>
+<circle cx="215" cy="125" r="9" fill="none" stroke="var(--c4)" stroke-width="2" stroke-dasharray="3 2"/><text class="nm" x="230" y="146">AiCare</text>
+<circle cx="325" cy="65" r="12" fill="var(--ol)"/><text class="nm" x="262" y="95">dmollis</text>
+</svg><p class="note">Penilaian kualitatif dari tampilan profil. Kotak emas: ruang kosong yang bisa dikuasai dmollis. AiCare adalah kompetitor di lini wangi dan B2B, bukan coklat.</p></div>
+<div class="box"><h3>Ditiru dan dihindari</h3><ul><li><b>Trufflelogy · tiru:</b> testimoni bernomor, cerita rumah produksi. <b>Hindari:</b> perang harga.</li><li><b>Hanania · tiru:</b> following 0 sebagai sinyal eksklusif, store sebagai kanal. <b>Hindari:</b> gaya cerah playful dan posisi oleh-oleh.</li><li><b>AiCare · tiru:</b> sorotan Clients, Price List, akun gift terpisah.</li></ul></div>
+<div class="box"><h3>Strategi lanjutan</h3><ul><li><b>Premium emosional:</b> bukan oleh-oleh, bukan sekadar coklat.</li><li><b>Otoritas:</b> rapikan following, sorotan testimoni bernomor, cerita "ribet" disematkan.</li><li><b>Jabodetabek:</b> seri "Dikirim dari Jogja, sampai besok".</li><li><b>B2B:</b> sorotan Korporat, Klien, Price List.</li><li><b>Store:</b> butik hadiah dengan meja tulis kartu.</li></ul></div>
+</div>
+</section>
+
+<section id="s1">
+<h2>Pilar konten</h2>
+<p class="sub">Ketuk pilar untuk melihat kontennya di kalender.</p>
+<div class="cols" id="pil"></div>
+<div class="box" style="margin-top:6px"><h3>Founder sebagai bagian dari cerita brand</h3><p>Founder tampil sebagai pencipta dan sudut pandang dmollis, bukan pengganti brand. Dua jalur: di akun dmollis (founder story, proses berpikir, keputusan kreatif) dan, bila owner berkenan, akun pribadi untuk perjalanan membangun brand. Keduanya saling menyebut dan memakai nada yang sama: elegan, puitis, jujur. Batas cerita pribadi disepakati bersama, dan identitas dmollis tetap yang utama.</p></div>
+</section>
+
+<section id="s2">
+<div class="pills" id="vw"><button data-v="d">Harian</button><button data-v="w">Mingguan</button><button data-v="m">Bulanan</button></div>
+<div class="dash"><aside class="sd"><div class="cd" id="mini"></div><div class="cd" id="pck"></div><div class="cd" id="mmn"></div></aside>
+<div class="calp"><div class="calh"><h2 id="rng"></h2><div class="nv"><button class="btn g" id="tdy">Hari ini</button><button class="btn g" id="prv" aria-label="Sebelumnya">‹</button><button class="btn g" id="nxt" aria-label="Berikutnya">›</button></div></div><div class="calw" id="cv"></div><p class="lg">Warna kartu: hijau tua = Draft, kuning = Siap, lime = Tayang. Titik warna = pilar. Ketuk kartu untuk hook, caption, dan arahan visual.</p></div></div>
+</section>
+
+<section id="str">
+<h2>Tracker konten</h2>
+<p class="sub">Isi sekali sehari setelah konten tayang. Rekomendasi tiap baris mengikuti aturan keputusan: DM terbanyak digandakan, reach tinggi tanpa DM diperbaiki CTA-nya, DM banyak tapi closing rendah diperbaiki template dan kecepatan balas. Data tersimpan di perangkat ini.</p>
+<div class="tot" id="tt"></div>
+<b style="font-size:14px;color:var(--mut)">Omzet per pilar</b><div id="tpl"></div>
+<div class="tw" style="margin-top:14px"><table class="trk"><thead><tr><th>Konten</th><th>Views</th><th>Saves</th><th>Klik link</th><th>DM masuk</th><th>Order</th><th>Omzet (Rp)</th><th>Rekomendasi</th><th></th></tr></thead><tbody id="tr"></tbody></table></div>
+<p style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="tadd">Tambah baris</button><button class="btn g" id="timp">Impor konten berstatus Tayang</button><button class="btn g" id="tcsv">Salin sebagai CSV</button><button class="btn g" id="tclr">Kosongkan</button></p>
+</section>
+
+<section id="s3">
+<h2>Script Reels</h2>
+<p class="sub">Format 9:16 (1080×1920), teks besar yang terbaca tanpa suara. Cahaya jendela, bukan lampu kuning.</p>
+<div id="scr"></div>
+</section>
+
+<section id="s4">
+<h2>KPI dan simulasi omzet</h2>
+<div class="tw"><table><thead><tr><th>Metrik</th><th>Baseline</th><th>30 hari</th><th>60 hari</th><th>90 hari (usulan)</th></tr></thead><tbody id="kpi"></tbody></table></div>
+<h3 style="margin:26px 0 10px;font-size:22px">Simulator omzet</h3>
+<p class="sub">Geser angka untuk melihat jarak ke target Rp100 juta per bulan. Angka awal hanya ilustrasi untuk bahan diskusi.</p>
+<div class="sim"><div class="box" id="sl"></div><div class="box"><div class="note">Omzet simulasi per bulan</div><div class="res" id="tot"></div><div class="pb"><div id="tb"></div></div><p id="gap"></p><p class="note" id="ads"></p></div></div>
+</section>
+
+<section id="s5">
+<h2>Sistem penjualan</h2>
+<p class="sub">Alur yang sudah ada (link bio, WhatsApp Business, QRIS) dipertahankan dan dirapikan supaya setiap order bisa ditelusuri ke kontennya.</p>
+<div class="cols">
+<div class="box"><h3>Kata kunci DM</h3><ul><li><b>GRADIENT</b> katalog dan harga Gradient</li><li><b>TULIP</b> Tulip Delight</li><li><b>NATAL</b> hampers Natal</li><li><b>KORPORAT</b> penawaran B2B</li></ul><p>Balas maksimal 1 jam di jam kerja; jadwal admin tetap.</p></div>
+<div class="box" id="tp"></div>
+
+</div>
+<div class="box"><h3>Sorotan Instagram baru</h3><ul><li><b>Testimoni</b> (bernomor, foto penerima)</li><li><b>Korporat</b> dan <b>Klien</b> (logo, dengan izin)</li><li><b>Custom Gift Card</b></li><li><b>Price List</b> dan <b>Hampers Natal</b></li><li><b>Dikirim dari Jogja</b> (info pengiriman)</li><li><b>Toko</b> (jam buka, suasana)</li></ul></div>
+
+</section>
+</main>
+<div class="w"><footer>Kalender mengikuti ritme batch: konten cepat dan mendesak (drop terbatas) berhasil bagi dmollis. Semua elemen brand mengikuti guideline client.</footer></div>
+</div></div><dialog id="dlg"></dialog>
+
+<script>
+const $=s=>document.querySelector(s);
+const ld=(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const P=[['Memory story','Tulisan di gift card, kisah pembeli dan penerima','20%'],['Sensory','Gradient dipotong, unboxing, Tulip Delight','25%'],['Craft & di balik layar','R&D rasa, kemasan, detail proses, tim produksi dan toko','15%'],['Proof','Testimoni, klien korporat (dengan izin), reaksi penerima','15%'],['Drop & momen','PO Natal, batch terbatas, B2B, toko','10%'],['Founder','Cerita dan sudut pandang owner: filosofi, proses berpikir, perjalanan dmollis','15%']];
+const W=['Minggu 1 · Ignite Memories + dekor Halloween|19–25 Okt','Minggu 2 · Halloween berjalan|26 Okt–1 Nov','Minggu 3 · Open PO Natal dan B2B|2–8 Nov','Minggu 4 · Momen dan store|9–15 Nov'];
+const I=[
+[0,'Sen 19 Okt','Reels',1,'Gradient dipotong','Satu potongan. Satu memori.','Setiap lapisan Gradient dibuat pelan, supaya yang menerimanya merasakan lebih dari sekadar manis.\nAda yang ingin kamu ingat bersamanya?\nPesan lewat link di bio atau DM GRADIENT.\n#dmollis #IgniteMemories','DM GRADIENT','Close-up pisau memotong Gradient, tekstur lapisan, suara potong, tanpa musik.'],
+[0,'Rab 21 Okt','Carousel',0,'dmollis, buku diary-nya relationship','Bukan sekadar coklat. Ini diary untuk hubungan.','dmollis dimulai dari satu keyakinan: rasa, tulisan, dan wangi bisa menyimpan memori. Geser untuk mengenal cara kami menjaga setiap momen jadi lebih berarti.\nIgnite Memories.','Klik link di bio','5 slide: cover, filosofi, rasa, tulisan gift card, wangi.'],
+[0,'Jum 23 Okt','Reels',2,'Dekor toko: dibalik layar','Di dmollis, tidak ada yang simpel. Dekornya juga.','Dari pita sampai detail terkecil, toko dmollis sedang kami sulap. Sengaja dibuat ribet, karena memori yang berarti tidak lahir dari jalan pintas.\nTema [untuk dikonfirmasi dmollis]. Sampai jumpa di toko.','Follow untuk melihat hasilnya','Time-lapse dekor toko, tangan memasang detail, cahaya hangat; 20 detik.','Halloween'],
+[0,'Min 25 Okt','Carousel + Story',0,'Gift card edisi Halloween','Pesan apa yang ingin kamu titipkan di malam Halloween?','Setiap pesanan dmollis mendapat custom gift card gratis. Untuk Halloween, tuliskan pesan manis atau misterius, kami yang menuliskannya dengan tangan.','Pesan lewat link bio','Gift card tulisan tangan bernuansa Halloween, flat lay, pena, pita.','Halloween'],
+[1,'Sen 26 Okt','Reels',4,'Reveal: toko dmollis versi Halloween','Toko dmollis malam ini punya cerita lain.','Dekor sudah selesai. Datang, rasakan suasananya, dan temukan hadiah yang menyimpan memori. Jam buka [jam], alamat [lokasi].','Datang ke toko atau DM GRADIENT','Reveal dari pintu masuk ke detail dekor, lampu hangat, musik lembut.','Halloween'],
+[1,'Rab 28 Okt','Carousel',4,'Suasana toko dmollis malam Halloween','Datang untuk coklatnya, tinggal untuk suasananya.','Toko dmollis sedang berdandan untuk Halloween. Datang, rasakan suasananya, atau pesan lewat link bio dan kami kirimkan dengan custom gift card. Jam buka [jam], alamat [lokasi].','Datang ke toko atau pesan lewat link bio','5 slide: pintu masuk, detail dekor, produk, gift card, jam buka dan lokasi.','Halloween'],
+[1,'Jum 30 Okt','Reels',3,'Reaksi penerima','Dia buka, lalu terdiam.','Momen favorit kami: hadiah sampai, lalu senyum muncul. Terima kasih sudah mempercayakan memorimu pada dmollis.','DM GRADIENT','Video pelanggan (izin dulu), potong ke momen buka.'],
+[1,'Sab 31 Okt','Reels + Story',4,'Halloween malam ini di dmollis','Malam ini, memori punya cahaya lain.','Selamat Halloween dari dmollis. Terima kasih sudah menjadi bagian dari memori kami.','Datang ke toko atau DM GRADIENT','Reels suasana toko saat malam, lampu dan detail dekor; story singkat sepanjang hari.','Halloween'],
+[1,'Min 1 Nov','Story',4,'Recap Halloween + teaser PO Natal','Terima kasih sudah ikut. Berikutnya: Natal.','Recap Halloween di dmollis dan teaser hampers Natal yang segera dibuka. Poll: rasa favoritmu?','Aktifkan pengingat','Montase momen Halloween, lalu 2 story teaser Natal.','Halloween'],
+[2,'Sen 2 Nov','Reels',4,'Open PO Hampers Natal','Natal ini, hadiahnya bisa disimpan seumur hidup.','Hampers Natal dmollis dibuka. Mulai Rp850 ribu: Gradient, lilin, dan potpourri, dengan custom gift card gratis. Kuota terbatas, batch pertama [tanggal].','DM NATAL','Reveal isi hampers: Gradient, lilin, potpourri, kartu.'],
+[2,'Rab 4 Nov','Carousel',4,'Natal untuk tim dan klien','HRD, hadiah akhir tahun yang tidak pasaran.','Hampers dmollis dengan kartu ucapan custom untuk tim dan klien. Pernah dipercaya [klien, dengan izin]. Pesanan mulai [minimal], lead time [hari].','DM KORPORAT','6 slide: masalah, paket, kartu custom, proses, referensi, kontak.'],
+[2,'Jum 6 Nov','Reels',1,'Tulip Delight','Bunga dan coklat, dalam satu hadiah.','Tulip Delight menyatukan bunga dan coklat, kombinasi yang belum kamu temukan di tempat lain.','DM TULIP','Tulip coklat dirangkai, close-up kelopak, musik lembut.'],
+[2,'Min 8 Nov','Story',3,'Kuota dan testimoni','Batch pertama tinggal [X] box.','Terima kasih yang sudah memesan. Ini kata mereka. Sisa kuota [X].','DM NATAL','Story testimoni + stiker countdown.'],
+[3,'Sen 9 Nov','Carousel',2,'Truffle: mulai dari yang kecil','Rp65 ribu untuk satu cerita.','Tidak perlu menunggu momen besar. Truffle dmollis hadir untuk hal kecil yang layak dirayakan: Dark, Milk, Tiramisu, Jasmine Tea, Matcha, Dubai Pistachio.','Pesan lewat link bio','Satu slide per rasa, harga jelas (Rp65–235 rb).'],
+[3,'Rab 11 Nov','Reels',0,'Dikirim dari Jogja, sampai besok','Dari Jogja untuk dia yang jauh. Sampai besok.','Jarak tidak harus membuat hadiah terlambat. Pilih, tulis pesanmu, kami kirim dari Jogja dan sampai besok ke kota besar di Jawa lewat [layanan, untuk dikonfirmasi dmollis].\nPesan lewat link bio atau DM GRADIENT.','DM GRADIENT','Perjalanan box: tulis kartu, packing, kurir, tangan penerima; teks "Dikirim hari ini, sampai besok".'],
+[3,'Jum 13 Nov','Reels',4,'Teaser store Kota Baru','Segera: dmollis hadir lebih dekat.','Satu tempat baru untuk menyimpan memori. Kabar lengkapnya segera. [lokasi dan tanggal, untuk dikonfirmasi dmollis]','Aktifkan pengingat','Teaser interior, detail saja, jangan tunjukkan semuanya.'],
+[3,'Min 15 Nov','Reels',4,'Batch pertama hampers Natal','Batch pertama menutup [tanggal].','Pengiriman Natal punya batas. Batch pertama ditutup [tanggal]; setelahnya mengikuti batch berikutnya.','DM NATAL','Teks besar + 3 shot hampers; mendesak tapi elegan.'],
+[2,'Kam 5 Nov','Reels',5,'Founder: dmollis, tempat bermain','Awalnya ini tempat bermain saya.','Cerita [nama founder, untuk dikonfirmasi dmollis] tentang kenapa dmollis dibuat, kenapa semuanya sengaja dibuat ribet, dan memori apa yang ingin dijaga.\nIgnite Memories.','Follow untuk cerita lanjutan','Founder bicara ke kamera di toko, cahaya hangat, 30–40 detik, kutipan di layar. Naskah disesuaikan dengan kata-kata founder sendiri.'],
+[3,'Kam 12 Nov','Reels',2,'Tim di balik layar: tangan di balik gift card','Setiap tulisan punya tangan.','Di balik setiap gift card dmollis ada tangan yang menulis, merapikan pita, dan memastikan semuanya sampai. Kenalan dengan tim kami.','Follow untuk kenal lebih dekat','Satu orang tim per cerita pendek, tangan menulis dan packing; wajah tampil bila yang bersangkutan setuju; 25 detik.']
+];
+const SC=[
+['1 · Gradient dipotong (ASMR)','Reels 18 detik · CTA DM GRADIENT · 19 Okt',[['0–3','Close-up pisau menyentuh Gradient','Satu potongan. Satu memori.','Suara potong, tanpa musik'],['3–8','Lapisan terlihat, cahaya jendela','—','Ambient'],['8–13','Potongan di piring, tangan mengambil','Gradient Chocolate','Nada lembut'],['13–18','Box premium dan gift card','Ignite Memories · DM GRADIENT','Musik naik tipis']]],
+['2 · Tulis memorimu','Reels 20 detik · CTA pesan lewat link bio · 9 Nov',[['0–3','Pena menyentuh kartu','Kata apa yang ingin kamu titipkan?','Suara pena'],['3–10','Tangan menulis pesan, close-up','Pesan yang ditulis (contoh)','Ambient'],['10–15','Kartu diselipkan ke box','Custom gift card gratis','Piano lembut'],['15–20','Box ditutup pita','Ignite Memories','Musik berhenti']]],
+['3 · Open PO Hampers Natal','Reels 15 detik · CTA DM NATAL · 2 Nov',[['0–2','Box tertutup di tengah frame','Natal ini, hadiahnya bisa disimpan seumur hidup.','Ambient'],['2–6','Box dibuka, Gradient terlihat','Gradient','Beat pelan'],['6–10','Lilin, potpourri, gift card','Lilin · Potpourri · Gift card','Beat'],['10–13','Box rapi, harga dan kuota','Mulai Rp850 ribu · kuota terbatas','Beat'],['13–15','Layar CTA','DM NATAL','Berhenti']]]
+];
+SC.push(['4 · Dekor toko: dibalik layar','Reels 20 detik · CTA follow · 23 Okt',[['0–3','Toko masih polos, lalu tangan memasang dekor pertama','Di dmollis, tidak ada yang simpel. Dekornya juga.','Suara pita dan kertas'],['3–10','Time-lapse dekor: lampu, detail kecil, kemasan','—','Musik lembut, naik pelan'],['10–16','Close-up detail yang paling ribet','Sengaja dibuat ribet','Ambient'],['16–20','Cuplikan toko hampir jadi','Segera di dmollis · [tanggal reveal]','Berhenti']]]);
+const K=[['Omzet bulanan','Rp30 jt','Baseline terkunci','Naik bertahap','Rp100 jt di momen puncak'],['ROAS iklan','Diukur minggu 1–2','Terukur per produk','Naik','Di atas titik impas margin'],['Pesanan B2B','Sesekali','50 prospek terdaftar','1 order pertama','2–3 pesanan'],['Repeat order','< 10%','Mulai diukur','10%','15%'],['Nilai order rata-rata','Rp100 rb','Bundling aktif','Naik','Naik lewat hampers'],['Waktu balas DM','Tidak menentu','< 1 jam','< 1 jam','< 1 jam'],['Konten per minggu','Hampir tidak ada','3–4 feed','3–4 feed + Reels','Konsisten'],['Halloween (toko)','—','Kunjungan dan tag UGC dicatat','Evaluasi campaign','Pelajaran untuk PO Natal'],['Views Instagram 90 hari','74.079','Naik','Naik','Fokus ke konversi'],['Pengikut Instagram','5.326','—','—','±7 rb (usulan)'],['Mengikuti','1.872','Dikurangi bertahap','Dikurangi','Dirapikan'],['Testimoni bernomor','—','Sorotan dibuat','10 testimoni','20 testimoni']];
+let st=ld('dm2_st',{}),flt=-1;
+// tabs
+const IC=['◈','⇄','❖','▦','✓','▶','◎','☷'];
+['Strategi','Kompetitor','Pilar','Kalender','Tracker','Script','KPI','Sistem'].forEach((n,i)=>{const b=document.createElement('button');b.innerHTML='<i>'+IC[i]+'</i><span>'+n+'</span>';b.setAttribute('role','tab');b.setAttribute('aria-selected',i==0);b.onclick=()=>go(i);$('#tabs').append(b)});
+function go(i){document.querySelectorAll('#tabs button').forEach((x,j)=>x.setAttribute('aria-selected',i==j));document.querySelectorAll('section').forEach((s,j)=>s.classList.toggle('on',i==j));window.scrollTo(0,0)}
+// pilar
+$('#pil').innerHTML=P.map((p,i)=>`<button class="pc" style="--cc:var(--c${i})" data-p="${i}"><span class="pct">${p[2]}</span><b>${p[0]}</b><span>${p[1]}</span></button>`).join('');
+$('#pil').onclick=e=>{const b=e.target.closest('.pc');if(!b)return;hid={};P.forEach((_,j)=>{if(j!=+b.dataset.p)hid[j]=1});side();cal();go(3)};
+// kalender dashboard
+const MO={Okt:9,Nov:10},DN=['Sen','Sel','Rab','Kam','Jum','Sab','Min'],MN=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'],SLT=['09.00','12.00','19.00'];
+const DT=I.map(x=>{const m=x[1].split(' ');return new Date(2026,MO[m[2]],+m[1])});
+const sameD=(a,b)=>a.toDateString()==b.toDateString(),addD=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x},mon=d=>{const x=addD(d,-((d.getDay()+6)%7));x.setHours(0,0,0,0);return x};
+const slot=x=>/Story/.test(x[2])?'09.00':/Carousel/.test(x[2])?'12.00':'19.00';
+const todayD=()=>{const t=new Date();t.setHours(0,0,0,0);return t>=new Date(2026,9,19)&&t<=new Date(2026,10,15)?t:new Date(2026,9,19)};
+let vw='w',hid={},cd=todayD();
+const shown=i=>!hid[I[i][3]]&&!(hid.H&&I[i][9]!=='Halloween');
+const ids=d=>I.map((x,i)=>i).filter(i=>sameD(DT[i],d)&&shown(i));
+const evb=i=>{const x=I[i],s=st[i]||'Draft';return `<button class="ev" data-s="${s}" data-i="${i}"><b>${x[4]}</b><span>${x[2]}${x[9]?' · 🎃':''}</span><i class="dt" style="background:var(--c${x[3]})"></i></button>`};
+function mini(){const f=new Date(cd.getFullYear(),cd.getMonth(),1),s0=mon(f),w0=mon(cd);
+ let h=`<div class="mh2"><b>${MN[cd.getMonth()]} ${cd.getFullYear()}</b></div><div class="m7">`+DN.map(n=>`<small>${n}</small>`).join('');
+ for(let k=0;k<42;k++){const d=addD(s0,k);if(k>=35&&d.getMonth()!=cd.getMonth())break;h+=`<button class="md${d.getMonth()!=cd.getMonth()?' off':''}${sameD(d,cd)?' on':''}${vw=='w'&&sameD(mon(d),w0)?' inw':''}" data-d="${d.getTime()}">${d.getDate()}${ids(d).length?'<u></u>':''}</button>`}
+ $('#mini').innerHTML=h+'</div>'}
+function cal(){
+ const el=$('#cv'),m0=mon(cd);let h='';
+ if(vw=='w'){const e=addD(m0,6);$('#rng').textContent=m0.getDate()+' – '+e.getDate()+' '+MN[e.getMonth()]+' 2026';
+  h='<div class="wg"><div class="wh" style="cursor:default"><small>GMT+7</small></div>'+DN.map((n,k)=>{const d=addD(m0,k);return `<div class="wh${sameD(d,cd)?' on':''}" data-d="${d.getTime()}"><b>${String(d.getDate()).padStart(2,'0')}</b><small>${n}</small></div>`}).join('');
+  SLT.forEach(sl=>{h+=`<div class="tm">${sl}</div>`;for(let k=0;k<7;k++)h+='<div class="cl">'+ids(addD(m0,k)).filter(i=>slot(I[i])==sl).map(evb).join('')+'</div>'});h+='</div>'}
+ else if(vw=='d'){$('#rng').textContent=DN[(cd.getDay()+6)%7]+', '+cd.getDate()+' '+MN[cd.getMonth()]+' 2026';const its=ids(cd);
+  h='<div class="dl">'+(its.length?its.map(i=>{const x=I[i],s=st[i]||'Draft',cp=x[9]?x[6]+'\n#MemoriesAfterDark #IgniteMemories #dmollis':x[6];return `<div class="dc"><div class="t">${x[2]} · ${P[x[3]][0]} · ${slot(x)}${x[9]?' · 🎃':''}</div><h3>${x[4]}</h3><p><b>Hook:</b> “${x[5]}”</p><div class="tpl">${cp}</div><p><b>CTA:</b> ${x[7]}<br><b>Visual:</b> ${x[8]}</p><p><select class="ss" data-i="${i}">${['Draft','Siap','Tayang'].map(o=>`<option${o==s?' selected':''}>${o}</option>`).join('')}</select></p></div>`}).join(''):'<p class="note" style="padding:24px">Tidak ada konten di hari ini. Pilih tanggal bertitik di kalender kecil.</p>')+'</div>'}
+ else{const s0=mon(new Date(cd.getFullYear(),cd.getMonth(),1));$('#rng').textContent=MN[cd.getMonth()]+' '+cd.getFullYear();
+  h='<div class="mg">'+DN.map(n=>`<div class="mh">${n}</div>`).join('');
+  for(let k=0;k<42;k++){const d=addD(s0,k);if(k>=35&&d.getMonth()!=cd.getMonth())break;h+=`<div class="mcell${d.getMonth()!=cd.getMonth()?' off':''}${sameD(d,cd)?' on':''}" data-d="${d.getTime()}"><b>${d.getDate()}</b>${ids(d).map(i=>`<span class="mi" data-i="${i}" data-s="${st[i]||'Draft'}" style="--cc:var(--c${I[i][3]})">${I[i][4]}</span>`).join('')}</div>`}h+='</div>'}
+ el.innerHTML=h;el.scrollLeft=0;mini();
+ const tay=Object.values(st).filter(v=>v=='Tayang').length;$('#stT').textContent=tay;$('#stP').style.width=tay/I.length*100+'%';
+ document.querySelectorAll('#vw button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v==vw))}
+function side(){$('#pck').innerHTML='<h3>Pilar</h3>'+P.map((p,i)=>`<button class="ck${hid[i]?'':' on'}" data-p="${i}"><u style="--cc:var(--c${i})"></u>${p[0]}</button>`).join('')+`<button class="ck${hid.H?' on':''}" data-p="H"><u style="--cc:var(--gold)"></u>🎃 Halloween saja</button>`}
+const MM=[['🎃 Halloween',new Date(2026,9,31)],['Open PO Hampers Natal',new Date(2026,10,2)],['Batch pertama menutup',new Date(2026,10,15)],['Hari Ibu',new Date(2026,11,22)],['Natal',new Date(2026,11,25)]];
+function mm(){$('#mmn').innerHTML='<h3>Momen</h3>'+MM.map(m=>`<button class="mm" data-d="${m[1].getTime()}">${m[0]}<small>${m[1].getDate()} ${MN[m[1].getMonth()].slice(0,3)}</small></button>`).join('')}
+$('#cv').addEventListener('click',e=>{const v=e.target.closest('.ev,.mi');if(v){open(+v.dataset.i);return}const w=e.target.closest('.wh[data-d],.mcell');if(w){cd=new Date(+w.dataset.d);if(w.classList.contains('mcell'))vw='d';cal()}});
+$('#cv').addEventListener('change',e=>{if(e.target.classList.contains('ss')){st[e.target.dataset.i]=e.target.value;sv('dm2_st',st);cal()}});
+$('#mini').addEventListener('click',e=>{const b=e.target.closest('.md');if(b){cd=new Date(+b.dataset.d);cal()}});
+$('#mmn').addEventListener('click',e=>{const b=e.target.closest('.mm');if(b){cd=new Date(+b.dataset.d);vw='w';cal()}});
+$('#pck').addEventListener('click',e=>{const b=e.target.closest('.ck');if(!b)return;const k=b.dataset.p;hid[k]=!hid[k];side();cal()});
+$('#vw').addEventListener('click',e=>{const v=e.target.dataset.v;if(v){vw=v;cal()}});
+$('#tdy').onclick=()=>{cd=todayD();cal()};
+$('#prv').onclick=()=>{cd=vw=='m'?new Date(cd.getFullYear(),cd.getMonth()-1,1):addD(cd,vw=='w'?-7:-1);cal()};
+$('#nxt').onclick=()=>{cd=vw=='m'?new Date(cd.getFullYear(),cd.getMonth()+1,1):addD(cd,vw=='w'?7:1);cal()};
+function tgr(){const d=document.documentElement.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.querySelectorAll('#tg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.t==d))}
+$('#tg').onclick=e=>{const t=e.target.dataset.t;if(t){document.documentElement.dataset.theme=t;tgr()}};
+function open(i){const x=I[i],d=$('#dlg'),cap=x[9]?x[6]+'\n#MemoriesAfterDark #IgniteMemories #dmollis':x[6];
+ d.innerHTML=`<b class="l">${x[1]} · ${x[2]} · ${P[x[3]][0]}</b><h3>${x[4]}</h3><p><b class="l">Hook 3 detik pertama</b>“${x[5]}”</p><p><b class="l">Caption</b></p><div class="tpl">${cap}</div><p><b class="l">CTA tunggal</b>${x[7]}</p><p><b class="l">Arahan visual</b>${x[8]}</p><p><b class="l">Status</b><select id="ss"><option>Draft</option><option>Siap</option><option>Tayang</option></select></p><p><button class="btn" id="ok">Simpan</button> <button class="btn g" id="cp">Salin caption</button> <button class="btn g" id="cx">Tutup</button></p>`;
+ $('#ss').value=st[i]||'Draft';$('#ok').onclick=()=>{st[i]=$('#ss').value;sv('dm2_st',st);d.close();cal()};
+ $('#cp').onclick=async e=>{try{await navigator.clipboard.writeText(cap);e.target.textContent='Tersalin'}catch(z){e.target.textContent='Salin manual'}};$('#cx').onclick=()=>d.close();d.showModal()}
+// script
+$('#scr').innerHTML=SC.map(s=>`<div class="sc"><h3>${s[0]}</h3><div class="m">${s[1]}</div><div class="tw"><table><thead><tr><th>Detik</th><th>Visual</th><th>Teks di layar</th><th>Audio</th></tr></thead><tbody>${s[2].map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('')}</tbody></table></div></div>`).join('');
+// kpi
+$('#kpi').innerHTML=K.map(r=>'<tr>'+r.map((c,i)=>i?`<td>${c}</td>`:`<td><b>${c}</b></td>`).join('')+'</tr>').join('');
+// simulator
+const SL=[['o','Order ritel per bulan',100,1200,50,450,v=>v],['a','Nilai order rata-rata (Rp ribu)',80,300,5,110,v=>'Rp'+v+' rb'],['n','Pesanan B2B per bulan',0,5,1,1,v=>v],['v','Nilai per pesanan B2B (Rp juta)',3,70,1,12,v=>'Rp'+v+' jt'],['r','Reseller dan store (Rp juta)',0,30,1,10,v=>'Rp'+v+' jt'],['d','Biaya iklan per hari (Rp ribu)',0,2000,50,350,v=>'Rp'+v+' rb']];
+$('#sl').innerHTML=SL.map(s=>`<div class="sl"><label for="${s[0]}">${s[1]}<b id="${s[0]}v"></b></label><input type="range" id="${s[0]}" min="${s[2]}" max="${s[3]}" step="${s[4]}" value="${s[5]}"></div>`).join('');
+function sim(){const g=k=>+$('#'+k).value;SL.forEach(s=>$('#'+s[0]+'v').textContent=s[6](g(s[0])));
+ const tot=(g('o')*g('a')*1000+g('n')*g('v')*1e6+g('r')*1e6),jt=tot/1e6;
+ $('#tot').textContent='Rp'+jt.toFixed(1).replace('.',',')+' jt';$('#tb').style.width=Math.min(100,jt)+'%';
+ $('#gap').textContent=jt>=100?'Target Rp100 juta tercapai pada simulasi ini.':'Kurang Rp'+(100-jt).toFixed(1).replace('.',',')+' juta dari target Rp100 juta.';
+ const ad=g('d')*1000*30;$('#ads').textContent='Biaya iklan ±Rp'+(ad/1e6).toFixed(1).replace('.',',')+' jt per bulan = '+(tot?Math.round(ad/tot*100):0)+'% dari omzet simulasi.'}
+$('#sl').oninput=sim;sim();
+// sistem
+const TP=[['Balasan langsung','Halo kak, terima kasih sudah tanya dmollis 🤍\nBerikut pilihan [produk] kami beserta harganya. Foto katalog di atas.\nMau dibuatkan custom gift card? Kami tuliskan gratis ya.'],['Follow-up 24 jam','Kak, batch [nama] kuotanya tinggal [X]. Mau dibantu pesankan sekarang?'],['Setelah barang diterima','Halo kak, paketnya sudah sampai? Boleh kami minta foto atau ceritanya? Semoga memori yang kamu titipkan sampai dengan baik 🤍']];
+$('#tp').innerHTML='<h3>Template balasan</h3>'+TP.map((t,i)=>`<b style="font-size:13px;color:var(--mut)">${t[0]}</b><div class="tpl">${t[1]}</div><button class="btn g" data-i="${i}">Salin</button>`).join('');
+$('#tp').onclick=async e=>{const i=e.target.dataset.i;if(i==null)return;try{await navigator.clipboard.writeText(TP[i][1]);e.target.textContent='Tersalin'}catch(z){e.target.textContent='Salin manual'}};
+const CN=['dmollis','Hanania','Trufflelogy','AiCare'];
+const CP=[['Pengikut','5.326','53,5 rb (centang biru)','50,7 rb (centang biru)','5.412'],['Postingan','265','198','804','387'],['Mengikuti','1.872','0','3.514','13'],['Positioning','Artisan, ekspresif, "diary relationship"','Artisan, oleh-oleh Jogja','Rumahan, segar, terjangkau','Wellness Nusantara, custom'],['Harga','Rp65–305 rb, hampers Rp850 rb+','Belum terlihat','Rp55–65 rb per box','Belum terlihat'],['Distribusi','Online, WhatsApp, Shopee, 1 toko','4+ store fisik','Online nasional','Offline Jogja, B2B'],['Target','Jabodetabek, hadiah pasangan','Turis dan warga Jogja','Nasional, volume','B2B hotel, souvenir, event'],['Bukti sosial','Testi ekspedisi','Foto tim dan store','Testimoni bernomor, cerita produksi','Sorotan Clients'],['Gaya visual','Olive, elegan, earthy','Cerah, playful, musiman','Hangat, rumahan','Burgundy, minimalis']];
+let vis=[1,1,1,1];
+function kp(){
+ $('#kc').innerHTML=CN.map((n,i)=>`<button class="chip" data-k="${i}" aria-pressed="${!!vis[i]}">${n}</button>`).join('');
+ $('#kh').innerHTML='<tr><th>Aspek</th>'+CN.map((n,i)=>vis[i]?`<th class="c${i+1}">${n}</th>`:'').join('')+'</tr>';
+ $('#kb').innerHTML=CP.map(r=>'<tr><td>'+r[0]+'</td>'+r.slice(1).map((c,i)=>vis[i]?`<td class="c${i+1}">${c}</td>`:'').join('')+'</tr>').join('')}
+$('#kc').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;const i=+b.dataset.k;if(vis[i]&&vis.filter(Boolean).length==1)return;vis[i]=vis[i]?0:1;kp()};
+kp();
+let rows=ld('dm2_rows',[]);
+const n0=v=>+v||0,rpf=v=>'Rp'+Number(v||0).toLocaleString('id-ID');
+function rec(r){if(r.c===''||r.c==null)return 'Pilih konten';const v=n0(r.v),d=n0(r.d),o=n0(r.o);if(!v&&!d)return 'Isi data';if(!d)return 'Reach ada, DM nol: ubah CTA atau penawaran';const cv=o/d;if(cv<.25)return 'DM masuk, closing rendah ('+Math.round(cv*100)+'%): perbaiki template dan kecepatan balas';return 'Konversi '+Math.round(cv*100)+'%: gandakan dengan 2 versi lanjutan'}
+function trTop(){let t=-1,mx=0;rows.forEach((r,k)=>{if(n0(r.r)>mx){mx=n0(r.r);t=k}});return t}
+function trs(){
+ const T=f=>rows.reduce((a,r)=>a+n0(r[f]),0),dm=T('d'),o=T('o');
+ $('#tt').innerHTML=`<div><b>${T('v').toLocaleString('id-ID')}</b><span>views</span></div><div><b>${dm}</b><span>DM masuk</span></div><div><b>${o}</b><span>order</span></div><div><b>${dm?Math.round(o/dm*100):0}%</b><span>konversi DM → order</span></div><div><b>${rpf(T('r'))}</b><span>omzet</span></div>`;
+ const by=P.map(()=>0);rows.forEach(r=>{if(r.c!==''&&r.c!=null&&I[r.c])by[I[r.c][3]]+=n0(r.r)});const m=Math.max(1,...by);
+ $('#tpl').innerHTML=P.map((p,i)=>`<div class="pbr"><span>${p[0]}</span><div><div style="width:${by[i]/m*100}%;background:var(--c${i})"></div></div><span>${rpf(by[i])}</span></div>`).join('');
+ const tp=trTop();document.querySelectorAll('#tr .rec').forEach((c,k)=>{c.textContent=(k==tp?'★ Omzet tertinggi. ':'')+rec(rows[k])})}
+function trk(){
+ $('#tr').innerHTML=rows.map((r,k)=>`<tr><td><select data-k="${k}" data-f="c"><option value="">Pilih konten</option>${I.map((x,i)=>`<option value="${i}"${r.c===i?' selected':''}>${x[1]} · ${x[4]}</option>`).join('')}</select></td>`+['v','s','k','d','o','r'].map(f=>`<td><input type="number" min="0" data-k="${k}" data-f="${f}" value="${n0(r[f])}"${f=='r'?' style="width:110px"':''}></td>`).join('')+`<td class="rec"></td><td><button class="btn g" data-del="${k}" aria-label="Hapus baris">×</button></td></tr>`).join('');
+ trs()}
+$('#tr').addEventListener('change',e=>{const t=e.target,k=t.dataset.k;if(k==null)return;rows[k][t.dataset.f]=t.dataset.f=='c'?(t.value===''?'':+t.value):t.value;sv('dm2_rows',rows);trs()});
+$('#tr').addEventListener('click',e=>{const k=e.target.dataset.del;if(k==null)return;rows.splice(k,1);sv('dm2_rows',rows);trk()});
+$('#tadd').onclick=()=>{rows.push({c:'',v:0,s:0,k:0,d:0,o:0,r:0});sv('dm2_rows',rows);trk()};
+$('#timp').onclick=()=>{Object.keys(st).forEach(i=>{if(st[i]=='Tayang'&&!rows.some(r=>r.c===+i))rows.push({c:+i,v:0,s:0,k:0,d:0,o:0,r:0})});sv('dm2_rows',rows);trk()};
+$('#tclr').onclick=()=>{if(confirm('Kosongkan semua baris tracker?')){rows=[];sv('dm2_rows',rows);trk()}};
+$('#tcsv').onclick=async e=>{const q=v=>'"'+String(v).replace(/"/g,'""')+'"';const t=['Konten,Pilar,Views,Saves,Klik link,DM,Order,Omzet'].concat(rows.map(r=>[r.c!==''&&I[r.c]?q(I[r.c][1]+' '+I[r.c][4]):'""',r.c!==''&&I[r.c]?q(P[I[r.c][3]][0]):'""',n0(r.v),n0(r.s),n0(r.k),n0(r.d),n0(r.o),n0(r.r)].join(','))).join('\n');try{await navigator.clipboard.writeText(t);e.target.textContent='Tersalin ✓'}catch(z){e.target.textContent='Salin manual gagal'}};
+trk();
+side();mm();tgr();cal();
+</script>
+</body>
+</html>
